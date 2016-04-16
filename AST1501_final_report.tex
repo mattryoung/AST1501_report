@@ -40,11 +40,11 @@
 \author{Matthew Young}
 \affil{Astronomy \& Astrophysics Department, University of Toronto, ON}
 \author{Supervised by: Keith Vanderlinde and Tyler Natoli}
-%\affil{50 St. George Street\\Toronto, Ontario, Canada\\M5S 3H4}
+\affil{50 St. George Street\\Toronto, Ontario, Canada\\M5S 3H4}
 %\email{young@astro.utoronto.ca}
 
 \begin{abstract}
-This is the abstract.
+The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be installed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the continued development of a cryogenic testing environment at the Univeristy of Toronto for characterizing the next generation of detectors.
 \end{abstract}
 
 %\keywords{key,words}
@@ -52,22 +52,50 @@ This is the abstract.
 
 \section{Introduction}
 
-This is the introduction.
+The South Pole Telescope (SPT) is a 10 metre microwave telescope, located at the geographic South Pole in Antarctica.  Designed to observe temperature and polarization anisotropies in the Cosmic Microwave Background (CMB) \citep{spt_collaboration_south_2004}, the telescope has been optimized to operate in the millimetre band spanning from 75~GHz to 240~GHz.
+The next generation optical system to be installed at the beginning of 2016, \textsc{spt-3g}, is to contain over 16,000 polarization sensitive detectors in the focal plane array.  This order of magnitude increase in the number of detectors over the current receiver will allow for high signal-to-noise mapping of both the \textit{E}-mode and \textit{B}-mode CMB polarization anisotropies \citep{benson_spt-3g:_2014}. With the increased sensitivity achieved by \textsc{spt-3g}, significant advances can be made in the fields of large scale structure formation, particle physics, and testing general relativity on large length scales.
 
-\section{Background}
 
-You want some background? Here's some background.
+The \textsc{spt-3g} detector wafers are currently being fabricated by Argonne National Laboratory, using a range of designs in order to tweak device parameters.  Each wafer is tested within the SPT collaboration, providing characteristic feedback for the nanofabrication process.  The detectors operate in the superconducting transition for niobium, requiring a sub-kelvin cryogenic environment for detector testing.  This report outlines the development of such a system at the University of Toronto (UofT), to assist in the testing and characterization of \textsc{spt-3g} wafers.  In conjunction, this system also features the \textsc{spt-3g} Digital Frequency Multiplexing (DfMUX) readout system.  This enables testing of the entire \textsc{spt-3g} detector readout chain at UofT.
+In Section~\ref{science_section}, the science goals of \textsc{spt-3g} are outlined, with the instrumentation required to achieve these goals covered in Section~\ref{instrumentation_section}.  Section~\ref{testing_section} details the development of the cryogenic testing at UofT, with current testing results in Section~\ref{results_section}.  Finally, Section~\ref{data_section} takes a brief look at processing \textsc{spt}pol detector timestreams into usable scientific data.
+
+
+
+\section{\textsc{spt-3g} Science Goals}
+\label{science_section}
+
+%This should be about the detectors and how they work, and how the cryostat is set up to test the detectors
+%Maybe some science background as to why this project is interesting
+Measurements produced by \textsc{spt-3g} will impact a range of cosmological fields, including inflationary theories, large-scale structure, and high-energy physics \citep{benson_spt-3g:_2014}.  The search for primordial \textit{B}-modes places constraints on the ratio of power in tensor perturbations to scalar perturbations, tied to the energy scale of inflation \citep{samtleben_cosmic_2007}.  Collected data will also be able to constrain the sum of neutrino masses, using information in the \textit{BB} lensed power spectrum to reduce the upper mass limit down to $\sim$0.06~eV, as well as addressing the neutrino mass hierarchy \citep{benson_spt-3g:_2014}.
+
+
+\section{\textsc{spt-3g} Instrumentation}
+\label{instrumentation_section}
+
+\subsection{Focal Plane Array}
+
+Each \textsc{spt-3g} wafer fabricated by Argonne National Laboratory contains 217 pixels, with each pixel featuring a sinuous log-periodic antenna, microstrip inductor-capacitor (LC) filters, and six transition edge superconducting (TES) bolometers \citep{benson_spt-3g:_2014}.  A photograph of the pixel design is shown in Figure.  The bolometers are responsible for detecting photons at band centres of either 95~GHz, 150~GHz, or 220~GHz for a given polarization, following the isolation of each signal by the LC filters.  As the TES bolometers are maintained in a superconducting phase transition through electro-thermal feedback \citep{benson_spt-3g:_2014}, a small increase in temperature due to the incident photons will result in a large change in resistivity.
+
+
+\subsection{Readout System}
+
+Reading out the thermal loading of each bolometer individually introduces an unnecessary number of wires to the sub-Kelvin stage, and as such, \textsc{spt-3g} utilizes a frequency multiplexing readout system, enabling 64 bolometers to be addressed using a single wire \citep{dobbs_frequency_2012}.  By placing each resistive bolometer in series with a unique LC filter, an LCR resonator is formed \citep{henning_feedhorn-coupled_2012} that can be interrogated using its characteristic resonant frequency, allowing the warm electronics to perform readout in Fourier space.  A digital frequency multiplexing (DfMUX) \citep{dobbs_frequency_2012} system has been developed by McGill University, designed to deliver small amplitude excitations to each resonator with active digital feedback for nulling the subsequent signal.  The error in signal cancellation is then sensitively measured using superconducting quantum interference devices (SQUIDs) \citep{dobbs_frequency_2012}, inferring changes in the bolometer impedance and hence thermal loading.
 
 \section{Testing Environment}
+\label{testing_section}
 
-May as well talk about the cryostat for a bit
+The Long Wavelength Lab currently houses an Olympus 104 cryostat, designed and fabricated by \textit{High Precision Devices} (HPD) in Colorado.  Featuring a helium pulse tube refrigerator in conjunction with an adiabatic demagnetization refrigeration (ADR) system, the cryostat is capable of achieving temperatures as low as 35~mK.  These sub-Kelvin temperatures are realized through the ADR, consisting of two paramagnetic salt pills within a superconducting electromagnet, backed by the 3~K base temperature of the pulse tube.  By applying a large current to the electromagnet, magnetic domains within the salt pills will begin to align, freezing out a thermal degree of freedom within the salt pills.  Once fully magnetized, the current can be removed, allowing magnetic domains to realign themselves and reintroducing the thermal degree of freedom.  In accordance with the conservation of energy, the realignment process draws heat from the system, lowering the pills to sub-Kelvin temperatures.
+
+The cryogenic testing environment also features an interactive control system and web interface, facilitating the measurement of system parameters such as temperature, pressure, and electromagnet current, as well as conducting the magnetization process.   An image of the current web interface is shown in Figure.  Following demagnetization, a proportional-integral-derivative (PID) controller maintains the cold-stage temperature at a predetermined setpoint, capable of regulating temperatures of 100~mK for 100 hours.
 
 
-\section{Readout Chain}
+\section{Testing Results}
+\label{results_section}
 
 SQUIDS 4 dayz.
 
 \section{Data Processing}
+\label{data_section}
 
 Looking towards the future!
 
