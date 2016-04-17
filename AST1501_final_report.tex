@@ -53,7 +53,7 @@ The next generation optical system for the South Pole Telescope, \textsc{spt-3g}
 \section{Introduction}
 
 The South Pole Telescope (SPT) is a 10 metre microwave telescope, located at the geographic South Pole in Antarctica.  Designed to observe temperature and polarization anisotropies in the Cosmic Microwave Background (CMB) \citep{spt_collaboration_south_2004}, the telescope has been optimized to operate in the millimetre (mm) band spanning from 75~GHz to 240~GHz.
-The next generation optical system to be installed at the beginning of 2016, \textsc{spt-3g}, is to contain over 16,000 polarization sensitive detectors in the focal plane array.  This order of magnitude increase in the number of detectors over the current receiver will allow for high signal-to-noise mapping of both the \textit{E}-mode and \textit{B}-mode CMB polarization anisotropies \citep{benson_spt-3g:_2014}. With the increased sensitivity achieved by \textsc{spt-3g}, significant advances can be made in the fields of large scale structure formation, particle physics, and inflation.
+The next generation optical system to be installed at the beginning of 2016, \textsc{spt-3g}, is to contain over 16,000 polarization sensitive detectors in the focal plane array.  This order of magnitude increase in the number of detectors over the current receiver will allow for high signal-to-noise mapping of both the \textit{E}-mode and \textit{B}-mode CMB polarization anisotropies \citep{benson_spt-3g:_2014}. With the increased sensitivity achieved by \textsc{spt-3g}, significant advances can be made in the fields of large scale structure formation, particle physics, and cosmic inflation.
 
 
 The \textsc{spt-3g} detector wafers are currently being fabricated by Argonne National Laboratory, using a range of designs in order to tweak device parameters.  Each wafer is tested within the SPT collaboration, providing characteristic feedback for the nanofabrication process.  The detectors operate in the superconducting transition for niobium, requiring a sub-kelvin cryogenic environment for detector testing.  This report outlines the development of such a system at the University of Toronto (UofT), to assist in the testing and characterization of \textsc{spt-3g} wafers.  In conjunction, this system also features the \textsc{spt-3g} Digital Frequency Multiplexing (DfMUX) readout system.  This enables testing of the entire \textsc{spt-3g} detector readout chain at UofT.
@@ -64,22 +64,28 @@ In Section~\ref{science_section}, the science goals of \textsc{spt-3g} are outli
 \section{\textsc{spt-3g} Science Goals}
 \label{science_section}
 
-The telescope is located at the geographical South Pole, providing one of best sites on Earth for observing mm-wavelength anisotropies.  This is in part due to the South Pole's elevation of 2.8~kilometres above sea level, resulting in desirably low levels of atmospheric fluctuation power.  The near zero air humidity also weakens the strong absorption and emission features of atmospheric water vapour at mm-wavelengths.
+The telescopes location at the Amundsen-Scott South Pole Station provides one of best sites on Earth for observing mm-wavelength anisotropies.  This is in part due to the South Pole's elevation of 2.8~kilometres above sea level, resulting in desirably low levels of atmospheric fluctuation power.  The near zero air humidity also weakens the strong absorption and emission features of atmospheric water vapour at mm-wavelengths.
 The current optical design produces a beamwidth of $\sim$1 arcmin at 150~GHz, allowing for high resolution mapping of small-scale CMB features.  Coupled with the high raw sensitivity achievable through the new multi-chroic polarization-sensitive pixel design, \textsc{spt-3g} will be able to extract a wealth of previously unobtainable cosmological information from the CMB.
 
 Lensing measurements of the CMB are capable of probing matter fluctuations out to the last scattering surface, providing a detailed lensing power spectrum.  \textsc{spt-3g}'s precise measurement of the growth of structure on small angular scales places tight constraints on the number of relativistic species at recombination.  Combined with measurements from the \textit{Planck} experiment, it is expected that the sum of neutrino masses will be constrained to within $\sigma(\Sigma m_{\nu})\sim0.06$~eV \citep{benson_spt-3g:_2014}.
 
+Currently pursued by a number of other instruments is the measurement of the energy scale of inflation, described by the tensor-to-scalar ratio \textit{r} of primordial fluctuations.  While instruments such as \textsc{bicep2}/\textsc{keck} are optimized for measuring low angular modes, they have little or no sensitivity to small-scale temperature and polarization anisotropies.  In order to fully characterize the inflationary and lensing \textit{B}-mode signals, it is vital to take a high-resolution, multifrequency approach.  \textsc{spt-3g} will be capable of producing a high signal-to-noise map of the lensed \textit{B}-modes, achieving a noise level of $\sim3.5\mu$K-arcmin.  When used in conjunction with its exquisite \textit{E}-mode measurements, the lensing potential can be reconstructed, allowing for the separation of the lensing \textit{B}-mode signal from the inflationary signal.  This process is known as "delensing", improving the shape of the tensor power spectrum and constraining \textit{r} to within $\sigma(r)\ll0.01$ \citep{benson_spt-3g:_2014}.
 
-UP TO HERE
+The high angular resolution of the telescope also provides a unique way of probing the largest gravitationally bound objects in the universe, clusters of galaxies.  CMB photons collide with high energy electrons contained within galaxy clusters, where they inverse Compton scatter to higher energies.  This produces a distortion in the CMB signal, known as the Sunyaev-Zel'dovich (SZ) effect.  This effect is largely redshift independent, allowing for the identification of almost every massive cluster above a given mass threshold, depending on instrument sensitivity.  \textsc{spt-3g} will be surveying a nearly identical 2500 deg$^2$ area to \textsc{spt-sz}, albeit with noise levels $\sim$12, 7, and 20 times lower at 95, 150, and 220~GHz, respectively.  The lowering of the cluster mass threshold and extension of redshift reach will allow \textsc{spt-3g} to find $\sim$5000 clusters at a signal-to-noise > 4.5, an order of magnitude more clusters than \textsc{spt-sz}.  Complimenting and calibrating the Dark Energy Survey (\textsc{des}) cluster survey, the SZ data is predicted to result in a dark energy figure-of-merit of $\sim$100.
+
+
 %Measurements produced by \textsc{spt-3g} will impact a range of cosmological fields, including inflationary theories, large-scale structure, and high-energy physics \citep{benson_spt-3g:_2014}.  The search for primordial \textit{B}-modes places constraints on the ratio of power in tensor perturbations to scalar perturbations, tied to the energy scale of inflation \citep{samtleben_cosmic_2007}.  Collected data will also be able to constrain the sum of neutrino masses, using information in the \textit{BB} lensed power spectrum to reduce the upper mass limit down to $\sim$0.06~eV, as well as addressing the neutrino mass hierarchy \citep{benson_spt-3g:_2014}.
 
 
 \section{\textsc{spt-3g} Instrumentation}
 \label{instrumentation_section}
 
+While the SPT third-generation receiver design also features new optics and cryostats, this report is to focus on the detectors contained in the focal plane array and its novel readout system.
+
 \subsection{Focal Plane Array}
 
 Each \textsc{spt-3g} wafer fabricated by Argonne National Laboratory contains 217 pixels, with each pixel featuring a sinuous log-periodic antenna, microstrip inductor-capacitor (LC) filters, and six transition edge superconducting (TES) bolometers \citep{benson_spt-3g:_2014}.  A photograph of the pixel design is shown in Figure.  The bolometers are responsible for detecting photons at band centres of either 95~GHz, 150~GHz, or 220~GHz for a given polarization, following the isolation of each signal by the LC filters.  As the TES bolometers are maintained in a superconducting phase transition through electro-thermal feedback \citep{benson_spt-3g:_2014}, a small increase in temperature due to the incident photons will result in a large change in resistivity.
+
 
 
 \subsection{Readout System}
@@ -89,9 +95,14 @@ Reading out the thermal loading of each bolometer individually introduces an unn
 \section{Testing Environment}
 \label{testing_section}
 
-The Long Wavelength Lab currently houses an Olympus 104 cryostat, designed and fabricated by \textit{High Precision Devices} (HPD) in Colorado.  Featuring a helium pulse tube refrigerator in conjunction with an adiabatic demagnetization refrigeration (ADR) system, the cryostat is capable of achieving temperatures as low as 35~mK.  These sub-Kelvin temperatures are realized through the ADR, consisting of two paramagnetic salt pills within a superconducting electromagnet, backed by the 3~K base temperature of the pulse tube.  By applying a large current to the electromagnet, magnetic domains within the salt pills will begin to align, freezing out a thermal degree of freedom within the salt pills.  Once fully magnetized, the current can be removed, allowing magnetic domains to realign themselves and reintroducing the thermal degree of freedom.  In accordance with the conservation of energy, the realignment process draws heat from the system, lowering the pills to sub-Kelvin temperatures.
+The Long Wavelength Lab (LWlab) at UofT currently houses an Olympus 104 cryostat, designed and fabricated by \textit{High Precision Devices} (HPD) in Colorado.  Featuring a helium pulse tube refrigerator in conjunction with an adiabatic demagnetization refrigeration (ADR) system, the cryostat is capable of achieving temperatures as low as 35~mK.  These sub-Kelvin temperatures are realized through the ADR, consisting of two paramagnetic salt pills within a superconducting electromagnet, backed by the 3~K base temperature of the pulse tube.  By applying a large current to the electromagnet, magnetic domains within the salt pills will begin to align, freezing out a thermal degree of freedom within the salt pills.  Once fully magnetized, the current can be removed, allowing magnetic domains to realign themselves and reintroducing the thermal degree of freedom.  In accordance with the conservation of energy, the realignment process draws heat from the system, lowering the pills to sub-Kelvin temperatures.
 
 The cryogenic testing environment also features an interactive control system and web interface, facilitating the measurement of system parameters such as temperature, pressure, and electromagnet current, as well as conducting the magnetization process.   An image of the current web interface is shown in Figure.  Following demagnetization, a proportional-integral-derivative (PID) controller maintains the cold-stage temperature at a predetermined setpoint, capable of regulating temperatures of 100~mK for 100 hours.
+
+\subsection{Cryostat Control System Development}
+
+\subsection{DfMUX Integration}
+
 
 
 \section{Testing Results}
@@ -103,6 +114,9 @@ SQUIDS 4 dayz.
 \label{data_section}
 
 Looking towards the future!
+
+
+\section{Conclusion}
 
 %\bibliography{biball2}
 \begin{thebibliography}{dummy}
