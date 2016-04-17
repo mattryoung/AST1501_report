@@ -36,7 +36,7 @@
 
 \begin{document}
 
-\title{A Cryogenic Testing Environment for SPT-3G}
+\title{A Cryogenic Testing Environment for SPT-3G, the Next Generation South Pole Telescope Receiver}
 \author{Matthew Young}
 \affil{Astronomy \& Astrophysics Department, University of Toronto, ON}
 \author{Supervised by: Keith Vanderlinde and Tyler Natoli}
@@ -44,7 +44,7 @@
 %\email{young@astro.utoronto.ca}
 
 \begin{abstract}
-The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be installed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the continued development of a cryogenic testing environment at the Univeristy of Toronto for characterizing the next generation of detectors.
+The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be installed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the continued development of a cryogenic testing environment at the University of Toronto for characterizing the next generation of detectors.
 \end{abstract}
 
 %\keywords{key,words}
@@ -52,8 +52,8 @@ The next generation optical system for the South Pole Telescope, \textsc{spt-3g}
 
 \section{Introduction}
 
-The South Pole Telescope (SPT) is a 10 metre microwave telescope, located at the geographic South Pole in Antarctica.  Designed to observe temperature and polarization anisotropies in the Cosmic Microwave Background (CMB) \citep{spt_collaboration_south_2004}, the telescope has been optimized to operate in the millimetre band spanning from 75~GHz to 240~GHz.
-The next generation optical system to be installed at the beginning of 2016, \textsc{spt-3g}, is to contain over 16,000 polarization sensitive detectors in the focal plane array.  This order of magnitude increase in the number of detectors over the current receiver will allow for high signal-to-noise mapping of both the \textit{E}-mode and \textit{B}-mode CMB polarization anisotropies \citep{benson_spt-3g:_2014}. With the increased sensitivity achieved by \textsc{spt-3g}, significant advances can be made in the fields of large scale structure formation, particle physics, and testing general relativity on large length scales.
+The South Pole Telescope (SPT) is a 10 metre microwave telescope, located at the geographic South Pole in Antarctica.  Designed to observe temperature and polarization anisotropies in the Cosmic Microwave Background (CMB) \citep{spt_collaboration_south_2004}, the telescope has been optimized to operate in the millimetre (mm) band spanning from 75~GHz to 240~GHz.
+The next generation optical system to be installed at the beginning of 2016, \textsc{spt-3g}, is to contain over 16,000 polarization sensitive detectors in the focal plane array.  This order of magnitude increase in the number of detectors over the current receiver will allow for high signal-to-noise mapping of both the \textit{E}-mode and \textit{B}-mode CMB polarization anisotropies \citep{benson_spt-3g:_2014}. With the increased sensitivity achieved by \textsc{spt-3g}, significant advances can be made in the fields of large scale structure formation, particle physics, and inflation.
 
 
 The \textsc{spt-3g} detector wafers are currently being fabricated by Argonne National Laboratory, using a range of designs in order to tweak device parameters.  Each wafer is tested within the SPT collaboration, providing characteristic feedback for the nanofabrication process.  The detectors operate in the superconducting transition for niobium, requiring a sub-kelvin cryogenic environment for detector testing.  This report outlines the development of such a system at the University of Toronto (UofT), to assist in the testing and characterization of \textsc{spt-3g} wafers.  In conjunction, this system also features the \textsc{spt-3g} Digital Frequency Multiplexing (DfMUX) readout system.  This enables testing of the entire \textsc{spt-3g} detector readout chain at UofT.
@@ -64,9 +64,14 @@ In Section~\ref{science_section}, the science goals of \textsc{spt-3g} are outli
 \section{\textsc{spt-3g} Science Goals}
 \label{science_section}
 
-%This should be about the detectors and how they work, and how the cryostat is set up to test the detectors
-%Maybe some science background as to why this project is interesting
-Measurements produced by \textsc{spt-3g} will impact a range of cosmological fields, including inflationary theories, large-scale structure, and high-energy physics \citep{benson_spt-3g:_2014}.  The search for primordial \textit{B}-modes places constraints on the ratio of power in tensor perturbations to scalar perturbations, tied to the energy scale of inflation \citep{samtleben_cosmic_2007}.  Collected data will also be able to constrain the sum of neutrino masses, using information in the \textit{BB} lensed power spectrum to reduce the upper mass limit down to $\sim$0.06~eV, as well as addressing the neutrino mass hierarchy \citep{benson_spt-3g:_2014}.
+The telescope is located at the geographical South Pole, providing one of best sites on Earth for observing mm-wavelength anisotropies.  This is in part due to the South Pole's elevation of 2.8~kilometres above sea level, resulting in desirably low levels of atmospheric fluctuation power.  The near zero air humidity also weakens the strong absorption and emission features of atmospheric water vapour at mm-wavelengths.
+The current optical design produces a beamwidth of $\sim$1 arcmin at 150~GHz, allowing for high resolution mapping of small-scale CMB features.  Coupled with the high raw sensitivity achievable through the new multi-chroic polarization-sensitive pixel design, \textsc{spt-3g} will be able to extract a wealth of previously unobtainable cosmological information from the CMB.
+
+Lensing measurements of the CMB are capable of probing matter fluctuations out to the last scattering surface, providing a detailed lensing power spectrum.  \textsc{spt-3g}'s precise measurement of the growth of structure on small angular scales places tight constraints on the number of relativistic species at recombination.  Combined with measurements from the \textit{Planck} experiment, it is expected that the sum of neutrino masses will be constrained to within $\sigma(\Sigma m_{\nu})\sim0.06$~eV \citep{benson_spt-3g:_2014}.
+
+
+
+%Measurements produced by \textsc{spt-3g} will impact a range of cosmological fields, including inflationary theories, large-scale structure, and high-energy physics \citep{benson_spt-3g:_2014}.  The search for primordial \textit{B}-modes places constraints on the ratio of power in tensor perturbations to scalar perturbations, tied to the energy scale of inflation \citep{samtleben_cosmic_2007}.  Collected data will also be able to constrain the sum of neutrino masses, using information in the \textit{BB} lensed power spectrum to reduce the upper mass limit down to $\sim$0.06~eV, as well as addressing the neutrino mass hierarchy \citep{benson_spt-3g:_2014}.
 
 
 \section{\textsc{spt-3g} Instrumentation}
