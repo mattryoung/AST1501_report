@@ -13,7 +13,7 @@
 %\usepackage{subcaption}
 %\usepackage{tabularx}
 %\usepackage{mathtools}
-%\usepackage{enumitem}
+\usepackage{enumitem}
 %\usepackage[font=small, labelfont=bf, labelsep=period, justification=justified]{caption}
 %\usepackage{afterpage}
 %\usepackage{hyperref}
@@ -44,7 +44,7 @@
 %\email{young@astro.utoronto.ca}
 
 \begin{abstract}
-The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be installed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the continued development of a cryogenic testing environment at the University of Toronto for characterizing the next generation of detectors.
+The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be installed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the development of a cryogenic testing environment at the University of Toronto for characterizing the next generation of detectors.
 \end{abstract}
 
 %\keywords{key,words}
@@ -118,7 +118,14 @@ Following demagnetization, the ADR's ultra-cold temperature is regulated at a ch
 
 \subsection{Cryostat Control System Development}
 
-
+The LWlab cryostat system is operated using the \textit{cryo-server}, a python-based control program featuring a tornado web-interface (written in coffeescript).  The cryo-server is responsible for a multitude of tasks, from monitoring and logging system parameters (temperature, pressure, \textit{etc.}), running commands from the web-interface, to performing ADR magnetization cycles with a suite of error checking.  In preparation for integrating the \textsc{spt-3g} testbed, some major improvements were made to the functionality of the cryo-server.  These include, but are not limited to;
+\begin{itemize}[noitemsep,nolistsep]
+	\item The monitoring of electromagnet back-EMF, preventing ADR magnetization cycles from quenching due to excessive current ramping.
+	\item Editing of cycle parameters through the web-interface, controlling ramp-up time, hold current, hold time, and ramp-down time.
+	\item Scheduling system for remotely starting a magnetization cycle at a specified start time, resulting in full cooling power available at the estimated end time.
+	\item Email alert system in the result of a UPS power failure.
+	\item Stability fixes preventing the cryo-server from crashing due to multiple connection requests.
+\end{itemize} 
 
 \subsection{DfMUX Integration}
 
