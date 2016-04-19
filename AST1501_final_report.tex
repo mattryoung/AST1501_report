@@ -145,11 +145,13 @@ The second major design challenge with integrating the DfMUX system lies with pa
 \section{Testing Results}
 \label{results_section}
 
-The end goal of characterising detectors conveniently allows multiple facets of the \textsc{spt-3g} readout chain to be tested in parallel.  Prior to bolometer biasing, the SQUIDs are tuned to the optimal bias point, testing SQUID performance.  Following this is a network analysis to locate each $LCR_{bolo}$ resonance, verifying wafer connectivity whilst also testing LC tower performance.  Finally the bolometers can be biased, providing a wealth of information on the wafer characteristics.  To date, approximately 30 wafers have been fabricated by the SPT collaboration.  The previously tested `Wafer 44' is used to validate the functionality of the cryogenic \textsc{spt-3g} testing environment developed at UofT.
+The end goal of characterising detectors conveniently allows multiple facets of the \textsc{spt-3g} readout chain to be tested in parallel.  Prior to operating the bolometers in their superconducting transition, the SQUIDs are tuned to the optimal bias point, testing SQUID performance.  Following this is a network analysis to locate each $LCR_{bolo}$ resonance, verifying wafer connectivity whilst also testing LC tower performance.  Finally the bolometers can be biased, providing a wealth of information on the wafer characteristics.  To date, approximately 30 wafers have been fabricated by the SPT collaboration.  The previously tested `Wafer 44' is used to validate the functionality of the cryogenic \textsc{spt-3g} testing environment developed at UofT.
 
 \subsection{SQUID Tuning}
 
-The DfMUX SQUID operation requires them to first be tuned to the region of maximum gain and linearity, by applying known current flux biases to the input coil
+The algorithm for tuning the SQUIDs to the region of maximum gain and linearity first starts by producing voltage-flux (V-Phi) curves for assorted SQUID current biases.  The flux bias Digital-to-Analog Converter (DAC) is sweeped through a range of values, mimicking the effect of a changing external magnetic field \citep{bender_digital_2014}.  The voltage produced at the SQUID output is measured, forming a periodic function with peaks corresponding to 1/2 of the SQUID flux quanta.
+
+
 
 \subsection{Network Analysis}
 
