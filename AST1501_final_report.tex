@@ -116,7 +116,7 @@ Following demagnetization, the ADR's ultra-cold temperature is regulated at a ch
 
 %The cryogenic testing environment also features an interactive control system and web interface, facilitating the measurement of system parameters such as temperature, pressure, and electromagnet current, as well as conducting the magnetization process.   An image of the current web interface is shown in Figure.  Following demagnetization, a proportional-integral-derivative (PID) controller maintains the cold-stage temperature at a predetermined setpoint, capable of regulating temperatures of 100~mK for 100 hours.
 
-\subsection{Cryostat Control System Development}
+\subsection{Control System Development}
 
 The LWlab cryostat system is operated using the \textit{cryo-server}, a python-based control program featuring a tornado web-interface (written in coffeescript).  The cryo-server is responsible for a multitude of tasks, from monitoring and logging system parameters (temperature, pressure, \textit{etc.}), running commands from the web-interface, to performing ADR magnetization cycles with a suite of error checking.  In preparation for integrating the \textsc{spt-3g} testbed, some major improvements were made to the functionality of the cryo-server.  These include, but are not limited to;
 \begin{itemize}[noitemsep,nolistsep]
@@ -132,12 +132,15 @@ The cryo-server now serves as a stable and reliable piece of control system soft
 
 To accommodate the integration of an \textsc{spt-3g} wafer holder and LC towers (containing the inductors and capacitors for the DfMUX readout), a new `cold-stage' was purchased and installed.  The cold-stage consists of three Oxygen-free High thermal Conductivity (OHFC) Copper rings, each separated by six insulating carbon fibre struts.  The upper-most ring attaches to the bottom of the 3~K stage, with the middle and lower rings connected to the intermediate and ultra-cold stages respectively via OHFC copper braids.  The \textsc{spt-3g} wafer holder is then mounted to the ultra-cold stage, allowing its temperature to be finely controlled and monitored through the control system.
 
-A suite of additional \textit{Lakeshore} thermometry (five \textit{Cernox} and two diodes) was calibrated and distributed across the \textsc{spt-3g} wafer installation.  Using a `cryoboard' (developed at McGill University) for readout, this setup allows for quick identification of high thermal loading points within the wafer setup by monitoring several points of interest in real time.  The cryoboard installation also accommodates the use of heater blocks (essentially resistors in an OHFC copper seat), allowing varying amounts of thermal power to be dumped onto the ultra-cold stage.
+A suite of additional \textit{Lakeshore} thermometry (five \textit{Cernox} and two diodes) was calibrated and distributed across the \textsc{spt-3g} wafer installation.  Using a `Cryoboard' (developed at McGill University) for readout, this setup allows for quick identification of high thermal loading points within the wafer setup by monitoring several points of interest in real time.  The Cryoboard installation also accommodates the use of heater blocks (essentially resistors in an OHFC copper seat), allowing varying amounts of thermal power to be dumped onto the ultra-cold stage.
 
 %Probably shouldn't mention the cable schedule, not that impressive
 
 \subsection{DfMUX Integration}
 
+The DfMUX readout system is run from an ICE motherboard FPGA platform (referred to as an \textit{Iceboard}) developed by McGill.  Along with Cryoboard, a custom-built enclosure is needed to house the two motherboards for both protection and compactness.  A $17\times12\times5$ inch steel box provided sufficient volume for containing the boards, their power supplies, and a dual fan-driven ventilation system.  The front and back panels were modelled using \textit{Solidworks} and exported to \textit{SprutCAM}, where tool paths were generated for cutting out front panel slots, fan ports, and holes for power and Ethernet jacks.  These tool paths can then be loaded onto a Computer Numeric Control (CNC) machine as G-code.  The \textit{Dunlap Institute}'s Tormach PCNC 770 was used to mill the front and back panels, which along with suitable mounting points and stand-offs, provided a suitable enclosure for the Iceboard and Cryoboard.
+
+The second major design challenge with integrating the DfMUX system lies with passing hundreds of wires through each stage of the cryostat to the inside of the 3~K can.  Conveniently, the HPD 104 cryostat comes with additional ports, for which the SPT collaboration has supplied a custom fitting wire harness.  The installation however required 
 
 
 \section{Testing Results}
