@@ -124,7 +124,7 @@ The LWlab cryostat system is operated using the \textit{cryo-server}, a python-b
 	\item Editing of cycle parameters through the web-interface, controlling ramp-up time, hold current, hold time, and ramp-down time.
 	\item A scheduling interface for automatically starting magnetization cycles, allowing wafer testing to proceed at a specified time.
 	\item An email alert system in the result of a Uninterruptible Power Suply (UPS) failure.
-	\item Stability fixes preventing the cryo-server from crashing due to multiple connection requests.
+	\item Stability fixes to prevent the cryo-server from crashing due to multiple connection requests.
 \end{itemize}
 The cryo-server now serves as a stable and reliable piece of control system software, allowing the cryostat system to be run remotely for the majority of a cooldown cycle.  Given the six-hour duration of a "full" magnetization cycle, the addition of the scheduling interface enables detector testing to take place during work hours without lost time to cycling the ADR, maximising testing throughput.
 
@@ -166,7 +166,14 @@ To account for systematics is the setup, the installed configuration features tw
 
 \subsection{Bolometer Biasing}
 
+The bolometer biasing operation starts by applying an AC bias voltage to each bolometer while above the superconducting transition temperature.  In this state, the bolometers behave like resistors and are referred to as being \textit{overbiased}.  The wafer temperature is then lowered below transition temperature, but with the bias voltages holding each bolometer in its `normal' state.  
 
+\begin{figure*}
+	\includegraphics[width=\textwidth]{bolometer_bias}
+	\centering
+	\caption{Bolometer biasing}
+	\label{bias}
+\end{figure*}
 
 \section{Data Processing}
 \label{data_section}
