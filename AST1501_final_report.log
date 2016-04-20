@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2016.3.22)  20 APR 2016 00:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2016.3.22)  20 APR 2016 00:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,65 +381,76 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 1014) in paragraph at lines 111--112
+) [1{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<sz_clusters.PNG, id=20, 621.07031pt x 517.935pt>
+File: sz_clusters.PNG Graphic file (type png)
+ <use sz_clusters.PNG>
+Package pdftex.def Info: sz_clusters.PNG used on input line 77.
+(pdftex.def)             Requested size: 245.26653pt x 204.5386pt.
+
+<pixel.PNG, id=22, 606.01407pt x 592.46344pt>
+File: pixel.PNG Graphic file (type png)
+ <use pixel.PNG>
+Package pdftex.def Info: pixel.PNG used on input line 96.
+(pdftex.def)             Requested size: 245.26653pt x 239.78365pt.
+ [2 <./sz_clusters.PNG> <./pixel.PNG>]
+Underfull \hbox (badness 1014) in paragraph at lines 124--125
 \T1/cmr/m/n/10 per-a-ture is reg-u-lated at a cho-sen set-point us-ing a
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 123.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 136.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
  [3]
-<squid.png, id=28, 647.41875pt x 430.60875pt>
+<squid.png, id=34, 647.41875pt x 430.60875pt>
 File: squid.png Graphic file (type png)
  <use squid.png>
-Package pdftex.def Info: squid.png used on input line 155.
+Package pdftex.def Info: squid.png used on input line 166.
 (pdftex.def)             Requested size: 245.26653pt x 163.12708pt.
-
-<bolometer_bias.png, id=29, 755.07094pt x 255.20343pt>
+ [4 <./squid.png>] <bolometer_bias.png, id=39, 755.07094pt x 255.20343pt>
 File: bolometer_bias.png Graphic file (type png)
 
 <use bolometer_bias.png>
-Package pdftex.def Info: bolometer_bias.png used on input line 172.
+Package pdftex.def Info: bolometer_bias.png used on input line 183.
 (pdftex.def)             Requested size: 513.11743pt x 173.427pt.
- [4 <./squid.png>]
+
 No file AST1501_final_report.bbl.
-[5 <./bolometer_bias.png>] (./AST1501_final_report.aux) ) 
+[5] [6 <./bolometer_bias.png>] (./AST1501_final_report.aux) ) 
 Here is how much of TeX's memory you used:
- 5423 strings out of 494820
- 70902 string characters out of 3178049
- 153452 words of memory out of 3000000
- 8520 multiletter control sequences out of 15000+200000
+ 5441 strings out of 494820
+ 71104 string characters out of 3178049
+ 162144 words of memory out of 3000000
+ 8530 multiletter control sequences out of 15000+200000
  17652 words of font info for 51 fonts, out of 3000000 for 9000
  198 hyphenation exceptions out of 8191
  39i,6n,28p,1599b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texlive/te
-xmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0700.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/cm-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sf
-ti0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.
-pfb>
-Output written on AST1501_final_report.pdf (5 pages, 388271 bytes).
+{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/cm-super/sfcc0900.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/cm-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-supe
+r/sfti0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1
+000.pfb>
+Output written on AST1501_final_report.pdf (6 pages, 1041498 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

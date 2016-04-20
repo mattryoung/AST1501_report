@@ -71,8 +71,14 @@ Lensing measurements of the CMB are capable of probing matter fluctuations out t
 
 Currently pursued by a number of other experiments is the measurement of the energy scale of inflation, described by the tensor-to-scalar ratio \textit{r} of primordial perturbations \citep{samtleben_cosmic_2007}.  While instruments such as \textsc{bicep2}/\textsc{keck} are optimized for measuring low angular modes, they have little or no sensitivity to small-scale temperature and polarization anisotropies.  In order to fully characterize the inflationary and lensing \textit{B}-mode signals, it is vital to take a high-resolution, multifrequency approach.  \textsc{spt-3g} will be capable of producing a high signal-to-noise map of the lensed \textit{B}-modes, achieving a noise level of $\sim3.5\mu$K-arcmin.  When used in conjunction with its exquisite \textit{E}-mode measurements, the lensing potential can be reconstructed, allowing for the separation of the lensing \textit{B}-mode signal from the inflationary signal.  This process is known as "delensing", improving the shape of the tensor power spectrum and constraining \textit{r} to within $\sigma(r)\ll0.01$ \citep{benson_spt-3g:_2014}.
 
-The high angular resolution of the telescope also provides a unique way of probing the largest gravitationally bound objects in the universe, clusters of galaxies.  CMB photons collide with high energy electrons contained within galaxy clusters, where they inverse Compton scatter to higher energies.  This produces a distortion in the CMB signal, known as the Sunyaev-Zel'dovich (SZ) effect.  This effect is largely redshift independent, allowing for the identification of almost every massive cluster above a given mass threshold, depending on instrument sensitivity.  \textsc{spt-3g} will be surveying a nearly identical 2500 deg$^2$ area to \textsc{spt-sz}, albeit with noise levels $\sim$12, 7, and 20 times lower at 95, 150, and 220~GHz, respectively.  The lowering of the cluster mass threshold and extension of redshift reach will allow \textsc{spt-3g} to find $\sim$5000 clusters at a signal-to-noise > 4.5, an order of magnitude more clusters than \textsc{spt-sz}.  Complimenting and calibrating the Dark Energy Survey (\textsc{des}) cluster survey, the SZ data is predicted to result in a dark energy figure-of-merit of $\sim$100.
+The high angular resolution of the telescope also provides a unique way of probing the largest gravitationally bound objects in the universe, clusters of galaxies.  CMB photons collide with high energy electrons contained within galaxy clusters, where they inverse Compton scatter to higher energies.  This produces a distortion in the CMB signal, known as the Sunyaev-Zel'dovich (SZ) effect.  This effect is largely redshift independent, allowing for the identification of almost every massive cluster above a given mass threshold, depending on instrument sensitivity.  \textsc{spt-3g} will be surveying a nearly identical 2500 deg$^2$ area to \textsc{spt-sz}, albeit with noise levels $\sim$12, 7, and 20 times lower at 95, 150, and 220~GHz, respectively.  The lowering of the cluster mass threshold and extension of redshift reach will allow \textsc{spt-3g} to find $\sim$5000 clusters at a signal-to-noise > 4.5, an order of magnitude more clusters than \textsc{spt-sz}.  The projected \textsc{spt-3g} cluster sample is shown in Figure~\ref{sptsz}.  Complimenting and calibrating the Dark Energy Survey (\textsc{des}) cluster survey, the SZ data is predicted to result in a dark energy figure-of-merit of $\sim$100.
 
+\begin{figure}
+	\includegraphics[width=\linewidth]{sz_clusters}
+	\centering
+	\caption{Mass versus redshift for the SZ clusters discovered by \textsc{spt-sz}, the \textit{Planck} survey, and projected \textsc{spt-3g} cluster sample.  The increased sensitivity of \textsc{spt-3g} lowers the mass threshold and extends redshift reach, predicting 5000 newly identified galaxy clusters.  Overplotted is the expected selection threshold for the eRosity X-ray cluster survey \citep{benson_spt-3g:_2014}.}
+	\label{sptsz}
+\end{figure}
 
 %Measurements produced by \textsc{spt-3g} will impact a range of cosmological fields, including inflationary theories, large-scale structure, and high-energy physics \citep{benson_spt-3g:_2014}.  The search for primordial \textit{B}-modes places constraints on the ratio of power in tensor perturbations to scalar perturbations, tied to the energy scale of inflation \citep{samtleben_cosmic_2007}.  Collected data will also be able to constrain the sum of neutrino masses, using information in the \textit{BB} lensed power spectrum to reduce the upper mass limit down to $\sim$0.06~eV, as well as addressing the neutrino mass hierarchy \citep{benson_spt-3g:_2014}.
 
@@ -85,6 +91,13 @@ While the SPT third-generation receiver design also features a new optical syste
 \subsection{Focal Plane Array}
 
 A significant contribution to \textsc{spt-3g}'s leap forward in sensitivity can be attributed to the newly designed focal plane array, featuring 2710 independent pixels compared to \textsc{spt-pol}'s 768.  Each pixel is polarization sensitive across three observing bands at 95, 150, and 220~GHz.  Using a sinuous log-periodic antenna, each pixel can absorb a wide band of mm-wave photons at orthogonal polarizations.  Once absorbed, microstrip transition line filters route the power from each band to one of six independent transition edge sensor (TES) bolometers (one for each band and polarization).   This design results in over 16,000 detectors across the entire focal plane array.  The focal plane array itself consist of 10 nanofabricated 6" wafers, each containing 217 of these polarization sensitive tri-chroic pixels in both left and right-handed configurations (to account for polarization wobble induced by the antenna shape).
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{pixel}
+	\centering
+	\caption{\textsc{spt-3g} tri-chroic pixel design, featuring a sinuous log-periodic antenna with dual-polarization.  The polarized signal is split into three bands at 95, 150, and 220~GHz, with each band sent to an independent TES bolometer.}
+	\label{sptpixel}
+\end{figure}
 
 Each detector is essentially a microstrip termination resistor located on a thermally isolated TES bolometer island.  The TES bolometer itself is held in its superconducting phase transition, where a small increase in temperature results in a dramatic increase in resistance.  By passing current through the TES, a change in resistance can be measured when an absorbed photon dumps energy onto the island through the microstrip.  This configuration allows for a negative feedback loop, where the increase in resistance restricts the bias current.  This lowers the power passing through the TES, dropping the detector back into its superconducting phase transition.  The bolometer time constant for this process is $\sim$3~ms.
 
@@ -149,14 +162,14 @@ The end goal of characterising detectors conveniently allows multiple facets of 
 
 \subsection{SQUID Tuning}
 
-The algorithm for tuning the SQUIDs to the region of maximum gain and linearity first starts by producing voltage-flux (V-Phi) curves for assorted SQUID current biases.  The flux bias Digital-to-Analog Converter (DAC) is sweeped through a range of values, mimicking the effect of a changing external magnetic field \citep{bender_digital_2014}.  The voltage required to zero the demodulated output is measured, forming a periodic function with peaks corresponding to 1/2 of the SQUID flux quanta.  The produced V-Phi curves for one of the SQUIDs is shown in Figure~\ref{vphi}.  The tuning algorithm correctly identifies the SQUID current and flux bias for maximum gain, verifying SQUID performance.
-
 \begin{figure}
 	\includegraphics[width=\linewidth]{squid}
 	\centering
 	\caption{A voltage-flux curve produced by sweeping through flux biases for a range of SQUID bias currents, measuring the voltage required to zero the demodulated output.  The tuning algorithm correctly identifies the region of maximum gain and linearity in this case for a SQUID current bias of $\sim$1.6~A and flux bias of $\sim$0.7~V}
 	\label{vphi}
 \end{figure}
+
+The algorithm for tuning the SQUIDs to the region of maximum gain and linearity first starts by producing voltage-flux (V-Phi) curves for assorted SQUID current biases.  The flux bias Digital-to-Analog Converter (DAC) is sweeped through a range of values, mimicking the effect of a changing external magnetic field \citep{bender_digital_2014}.  The voltage required to zero the demodulated output is measured, forming a periodic function with peaks corresponding to 1/2 of the SQUID flux quanta.  The produced V-Phi curves for one of the SQUIDs is shown in Figure~\ref{vphi}.  The tuning algorithm correctly identifies the SQUID current and flux bias for maximum gain, verifying SQUID performance.
 
 \subsection{Network Analysis}
 
@@ -166,14 +179,14 @@ To account for systematics is the setup, the installed configuration features tw
 
 \subsection{Bolometer Biasing}
 
-The bolometer biasing operation starts by applying an AC bias voltage to each bolometer while above the superconducting transition temperature.  In this state, the bolometers behave like resistors and are referred to as being \textit{overbiased}.  The wafer temperature is then lowered below transition temperature, but with the bias voltages holding each bolometer in its `normal' state.  Each bias voltage is then gradually stepped down, lowering the bolometers into their superconducting transition.  This process is demonstrated in Figure~\ref{bias}, clearly showing a linear decrease in measured current until a sufficiently low bias voltage is reached, at which point the bolometer transitions into its superconducting phase.  This be easily seen in the sharp drop in resistance between the normal and superconducting phases.
-
 \begin{figure*}
 	\includegraphics[width=\textwidth]{bolometer_bias}
 	\centering
 	\caption{Produced current-voltage (IV), resistance-power (RP), and resistance-voltage (RV) curves during the bolometer biasing process.  Bolometer `13.A' achieved a superconducting resistance 0.313 times that of its normal value.  The final state of the bolometer is shown in red.  The left figure demonstrates a linear decrease in current as the bias voltage is stepped down, with a turnaround into the superconducting region once the bias is sufficiently low.  The middle figure shows the saturation power on the bolometer island necessary for the bolometer to go superconducting, with a slight bend due to parasitic resistance located off the island.  Figure 3 demonstrates the sharp decrease in bolometer resistance as it transitions from its normal to superconducting state.}
 	\label{bias}
 \end{figure*}
+
+The bolometer biasing operation starts by applying an AC bias voltage to each bolometer while above the superconducting transition temperature.  In this state, the bolometers behave like resistors and are referred to as being \textit{overbiased}.  The wafer temperature is then lowered below transition temperature, but with the bias voltages holding each bolometer in its `normal' state.  Each bias voltage is then gradually stepped down, lowering the bolometers into their superconducting transition.  This process is demonstrated in Figure~\ref{bias}, clearly showing a linear decrease in measured current until a sufficiently low bias voltage is reached, at which point the bolometer transitions into its superconducting phase.  This be easily seen in the sharp drop in resistance between the normal and superconducting phases.
 
 Following the successful bolometer biasing, information can be extracted on the critical TES temperatures, saturation power of the bolometers, and their normal/superconducting resistances.  This information is essential for feeding back into the wafer fabrication process, and even more so for the wafers that will be used in the deployment of \textsc{spt-3g}.  This also concludes the end-to-end verification of the developed \textsc{spt-3g} testing facility at UofT.
 
