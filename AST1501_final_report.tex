@@ -166,17 +166,21 @@ To account for systematics is the setup, the installed configuration features tw
 
 \subsection{Bolometer Biasing}
 
-The bolometer biasing operation starts by applying an AC bias voltage to each bolometer while above the superconducting transition temperature.  In this state, the bolometers behave like resistors and are referred to as being \textit{overbiased}.  The wafer temperature is then lowered below transition temperature, but with the bias voltages holding each bolometer in its `normal' state.  
+The bolometer biasing operation starts by applying an AC bias voltage to each bolometer while above the superconducting transition temperature.  In this state, the bolometers behave like resistors and are referred to as being \textit{overbiased}.  The wafer temperature is then lowered below transition temperature, but with the bias voltages holding each bolometer in its `normal' state.  Each bias voltage is then gradually stepped down, lowering the bolometers into their superconducting transition.  This process is demonstrated in Figure~\ref{bias}, clearly showing a linear decrease in measured current until a sufficiently low bias voltage is reached, at which point the bolometer transitions into its superconducting phase.  This be easily seen in the sharp drop in resistance between the normal and superconducting phases.
 
 \begin{figure*}
 	\includegraphics[width=\textwidth]{bolometer_bias}
 	\centering
-	\caption{Bolometer biasing}
+	\caption{Produced current-voltage (IV), resistance-power (RP), and resistance-voltage (RV) curves during the bolometer biasing process.  Bolometer `13.A' achieved a superconducting resistance 0.313 times that of its normal value.  The final state of the bolometer is shown in red.  The left figure demonstrates a linear decrease in current as the bias voltage is stepped down, with a turnaround into the superconducting region once the bias is sufficiently low.  The middle figure shows the saturation power on the bolometer island necessary for the bolometer to go superconducting, with a slight bend due to parasitic resistance located off the island.  Figure 3 demonstrates the sharp decrease in bolometer resistance as it transitions from its normal to superconducting state.}
 	\label{bias}
 \end{figure*}
 
-\section{Data Processing}
+Following the successful bolometer biasing, information can be extracted on the critical TES temperatures, saturation power of the bolometers, and their normal/superconducting resistances.  This information is essential for feeding back into the wafer fabrication process, and even more so for the wafers that will be used in the deployment of \textsc{spt-3g}.  This also concludes the end-to-end verification of the developed \textsc{spt-3g} testing facility at UofT.
+
+\section{\textsc{spt-pol} Data Processing}
 \label{data_section}
+
+
 
 \section{Conclusion}
 
