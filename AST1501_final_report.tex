@@ -202,13 +202,13 @@ Following the successful bolometer biasing, information can be extracted on the 
 	\label{map}
 \end{figure*}
 
-The \textsc{spt-pol} survey was the polarization-sensitive survey by the SPT, looking at a 500 square degree patch of sky in the 90 and 150~GHz bands.  Many of the measurement, readout, and processing principals remain the same between this survey and \textsc{spt-3g}.  This section takes a brief look at the \textsc{spt-pol} processing used in converting bolometer timestreams into usable CMB maps and power spectra for extracting scientific data.
+The \textsc{spt-pol} survey was the polarization-sensitive survey by the SPT, looking at a 500 square degree patch of sky in the 90 and 150~GHz bands \citep{sptpol_2012}.  Many of the measurement, readout, and processing principals remain the same between this survey and \textsc{spt-3g}.  This section takes a brief look at the \textsc{spt-pol} processing used in converting bolometer timestreams into usable CMB maps and power spectra for extracting scientific data.
 
 The raw telescope data is stored across multiple Hierarchical Data Format (HDF) databases, with each corresponding to a block of observation time.  Specific scans can be extracted from these databases, and stored as a minimally processed intermediate data file (IDF).  The developed \textit{SPTDataReader} allows the IDF files to be read in as python structures, allowing for easy access and manipulation of vast arrays of telescope data.  Including vital bolometer timestreams and scanning strategies, they even contain data such as wind speed and direction.
 
-Figure~\ref{map} contains maps created using data from a 100 square degree survey centred at a Right Ascension (RA) of 23$^h$30 and Declination of 55$^{\circ}$.  The scanning strategy splits the field into two halves, using two identical raster scans in succession as the celestial sky rotates through the scanned region (scanning the whole field every hour).  The first panel in Figure~\ref{map} shows the mapped bolometer timestream from a single raster scan pattern, with minimal filtering to remove `bad' bolometers.  To the first order, all that can be seen is the difference in microwave temperature as a function of atmosphere thickness.  The middle panel in Figure~\ref{map} features the same mapped timestream, but using a fourth order polynomial fit to each scan segment along with a Gaussian smoothing profile.  The visible signal here is due to atmospheric fluctuations, which can be averaged out over multiple scans of the field.  The last panel in Figure~\ref{map} shows a coadded map of the entire field, averaged over scans taken throughout the course of an entire year (Feb. 2012 - Apr. 2013, excluding Austral summer).  Similar filtering is used to that of the middle panel, including point source removal and an apodization mask to smooth out the borders.
+Figure~\ref{map} contains maps created using data from a 100 square degree survey centred at a Right Ascension (RA) of 23$^h$30 and Declination of 55$^{\circ}$.  The scanning strategy splits the field into two halves, using two identical raster scans in succession as the celestial sky rotates through the scanned region (scanning the whole field every hour).  The first panel in Figure~\ref{map} shows the mapped 150~GHz bolometer timestream from a single raster scan pattern, with minimal filtering to remove `bad' bolometers.  To the first order, all that can be seen is the difference in microwave temperature as a function of atmosphere thickness.  The middle panel in Figure~\ref{map} features the same mapped timestream, but using a fourth order polynomial fit to each scan segment along with a Gaussian smoothing profile.  The visible signal here is due to atmospheric fluctuations, which can be averaged out over multiple scans of the field.  The last panel in Figure~\ref{map} shows a coadded map of the entire field, averaged over scans taken throughout the course of an entire year (Feb. 2012 - Apr. 2013, excluding Austral summer).  Similar filtering is used to that of the middle panel, including point source removal and an apodization mask to smooth out the borders.
 
-
+Once T, E, and B mode polarization maps have been  computed, the {spt-pol} software library contains a number of functions for producing their power spectra.  Map pairs can be used to create their cross-spectra, with options to mask specific features or vary the Fast Fourier Transform (FFT) shape.  As with the maps themselves, multiple map bundle pair's cross-spectra can be averaged, also producing the covariance between bins of the cross-spectrum.
 
 \section{Conclusion}
 
@@ -237,6 +237,9 @@ Ruhl, J. E., Ade, P. A. R., Carlstrom, J. E., et al. 2004, {arXiv:astro-ph/04111
 
 \bibitem[Posada et al.(2015)]{posada_fabrication_2015}
 Posada, C. M., Ade, P. A. R., Ahmed, Z., et al. 2015, Superconductor Science and Technology, 28, 9
+
+\bibitem[Austermann et al.(2012)]{sptpol_2012}
+Austermann, J. E., Aird, K. A., Beall, J. A., et al. 2012, {arXiv:1210.4970 [astro-ph]}
 
 \end{thebibliography}
 
