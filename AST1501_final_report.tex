@@ -44,7 +44,7 @@
 %\email{young@astro.utoronto.ca}
 
 \begin{abstract}
-The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be installed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the development of a cryogenic testing environment at the University of Toronto for characterizing the next generation of detectors.
+The next generation optical system for the South Pole Telescope, \textsc{spt-3g}, is set to be deployed in early 2016.  This report outlines the fundamental science goals and operation behind \textsc{spt-3g}, and covers the development of a cryogenic testing environment at the University of Toronto for characterizing the next generation of detectors.  A helium pulse tube driven cryostat housing an adiabatic demagnetization refrigerator has enabled sub-Kelvin temperatures on the \textsc{spt-3g} wafer stage, essential for operating the superconducting detectors.  This has lead to the successful biasing of detectors and verification of the entire integrated readout chain.
 \end{abstract}
 
 %\keywords{key,words}
@@ -177,14 +177,13 @@ The end goal of characterising detectors conveniently allows multiple facets of 
 	\label{bias}
 \end{figure*}
 
-The algorithm for tuning the SQUIDs to the region of maximum gain and linearity first starts by producing voltage-flux (V-Phi) curves for assorted SQUID current biases.  The flux bias Digital-to-Analog Converter (DAC) is sweeped through a range of values, mimicking the effect of a changing external magnetic field \citep{bender_digital_2014}.  The voltage required to zero the demodulated output is measured, forming a periodic function with peaks corresponding to 1/2 of the SQUID flux quanta.  The produced V-Phi curves for one of the SQUIDs is shown in Figure~\ref{vphi}.  The tuning algorithm correctly identifies the SQUID current and flux bias for maximum gain, verifying SQUID performance.
-
+The algorithm for tuning the SQUIDs to the region of maximum gain and linearity first starts by producing voltage-flux (V-Phi) curves for assorted SQUID current biases.  The flux bias Digital-to-Analog Converter (DAC) is sweeped through a range of values, mimicking the effect of a changing external magnetic field \citep{bender_digital_2014}.  The voltage required to zero the demodulated output is measured, forming a periodic function with peaks corresponding to 1/2 of the SQUID flux quanta.  The produced V-Phi curves for one of the SQUIDs is shown in Figure~\ref{vphi}, demonstrating the periodic voltage output as a function of flux quanta.  Following the V-Phi measurement, the tuning algorithm correctly identifies the SQUID current and flux bias for maximum gain, verifying SQUID performance.
 
 \subsection{Network Analysis}
 
 Once the SQUIDs have been successfully tuned, a network analysis algorithm works to identify each of the 64 $LCR_{bolo}$ resonant frequencies along with four additional resonances from calibration resistors.  The carrier and nuller DACs scan through a range of frequencies in the area of 200~kHz to 7~MHz, operating all 64 readout channels simultaneously until the full bandwidth of the system is probed.  The output demodulated amplitude is measured and averaged, producing the readout module response as a function of frequency.  A curve-fitting algorithm identifies each peak is the response, ideally producing 68 frequencies corresponding to each $LCR$ resonance.  
 
-To account for systematics in the setup, the installed configuration features two LC towers.  One services the wafer, while the other connects to a resistor board of known values and hence known resonances.  Early network analyses of the system produced poor results, with large noise levels causing the curve-fitting algorithm to fail.  Revisions to the cryostat grounding scheme (where ground loops can produce stray currents through electromagnetic induction) and RF environment were successful in reducing the noise level in the readout module response.  All 68 resonances were correctly identified, verifying this stage of the DfMUX readout system and permitting each bolometer to now be targeted and biased through its unique frequency.
+To account for systematics in the setup and allow for calibration, the installed configuration features two LC towers.  One services the wafer, while the other connects to a resistor board of known values and hence known resonances.  Early network analyses of the system produced poor results, with large noise levels causing the curve-fitting algorithm to fail.  Revisions to the cryostat grounding scheme (where ground loops can produce stray currents through electromagnetic induction) and RF environment were successful in reducing the noise level in the readout module response.  All 68 resonances were correctly identified, verifying this stage of the DfMUX readout system.   Each bolometer can now be targeted and biased through its unique resonant frequency.
 
 \subsection{Bolometer Biasing}
 
